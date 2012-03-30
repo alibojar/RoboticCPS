@@ -1,6 +1,6 @@
-<h1>Robotic teamwork in AgentSpeak</h1>
+Robotic teamwork in AgentSpeak
 
-This is a pre alpha version. Expect bugs.
+**This is a pre-alpha version. Expect bugs.**
 
 This is an implementation of a robotic rescue scenario where a rescuer robot searches for injured people which are shown by colour papers and informs the two medic/doctor robots of their location.
 
