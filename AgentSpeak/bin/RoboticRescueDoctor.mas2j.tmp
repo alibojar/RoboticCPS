@@ -1,0 +1,15 @@
+/*
+    Jason Project
+
+    -- created on February 21, 2012
+*/
+
+MAS roboticrescuedoctor {
+   infrastructure: Centralised
+
+   agents:
+       rescuer;
+       doctor;
+
+   aslSourcePath: "src/asl"; 
+}
