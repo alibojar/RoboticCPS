@@ -23,13 +23,13 @@ public class BTReceive implements Runnable{
 	
 	public void run(){
 		try{
-			while(true) manipulate(in.readUTF());
+			while(true) parse(in.readUTF());
 		} catch (Exception e) {}
 	}
 	
 	//Message scheme: Key;X;Y;Colour
 	//Message example: 2;25.5;14.7;Red
-	private void manipulate(String message) throws Exception{
+	private void parse(String message) throws Exception{
 		System.out.println(message);
 		String[] injMessage = Split(message,";");
 		Injured inj = new Injured();
