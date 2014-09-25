@@ -7,5 +7,3 @@ The medic/doctor robots attend an injured, spend a few seconds with her and move
 The LeJOS folder contains the code that runs on the rescuer and doctor/medic robots. The AgentSpeak folder contains the code for robotic teamwork and the middle-ware that connects AgentSpeak and LeJOS though bluetooth.
 
 This [video](http://vimeo.com/42409674) demonstrates the code in action.
-
-Ali Bojarpour
