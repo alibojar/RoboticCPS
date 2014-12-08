@@ -1,3 +1,4 @@
+free[source(rescuer)].
 
 !rescue.
 
@@ -37,7 +38,11 @@
 +abandoned(Inj)[source(Doc)] <- 	-attending(Inj)[source(Doc)];
 									+injured(Inj);
 									-abandoned(Inj)[source(Doc)].
-									
-+free[source(Doc)] <- .print(Doc, " is free.").
+
+
+
++free[source(Doc)]: true <- 	.print(Doc, " is free.");
+								+team(Doc);
+								.broadcast(tell, team(Doc)).
 
 -free[source(Doc)] <- .print(Doc, " is busy.").										

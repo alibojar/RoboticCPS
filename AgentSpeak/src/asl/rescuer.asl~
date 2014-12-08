@@ -37,44 +37,12 @@
 +abandoned(Inj)[source(Doc)] <- 	-attending(Inj)[source(Doc)];
 									+injured(Inj);
 									-abandoned(Inj)[source(Doc)].
-									
-+free[source(Doc)] <- .print(Doc, " is free.").
 
--free[source(Doc)] <- .print(Doc, " is busy.").
++team(Member): .broadcast(tell, team(Member)).
 
++team(rescuer).
 
-//+injured(Inj): free[source(Doc)] <- .print("Asking ", Doc, " to attend ", Inj);
-//										.send(Doc,tell,goTo(Inj)).
++free[source(Doc)] <- .print(Doc, " is free.");
+						+team(Doc).
 
-//+injured(Inj): not free[source(Doc)] <- .brodcast(tell,goTo(Inj)).
-
-//+discharge(Inj) <- -injured(Inj).
-
-
-/*
-+!rescue: free[source(Doc)] <- -free[source(Doc)];
-								rescuer.a1(Inj);
-								+injured(Inj);
-								.print("Asking ", Doc, " to attend ", Inj);
-								.send(Doc,tell,goTo(Inj));
-								!rescue.
-								
-+!rescue: not free[source(Doc)] <- .wait(1000); 
-									!rescue.
-							
-+discharge(Inj)[source(Doc)]<- -injured(Inj).
-
-+injured(Inj)<- .print("New injured:", Inj).
-
--injured(Inj)<- .print(Inj, " discharged").
-*/
-/*
-!search.
-
-+!search<- 	rescuer.a1(Inj);
-			+injured(Id,Inj);
-			!inform_doctors(Inj).
-
-+!inform_doctors(Inj): free[source(Doc)] <- -free[source(Doc)];
-												.send(Doc,tell,goTo(Inj));
-*/											
+-free[source(Doc)] <- .print(Doc, " is busy.").										
