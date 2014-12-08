@@ -18,7 +18,7 @@ free[source(rescuer)].
 
 +!check_injureds : injured(Inj) <- !check_injureds(Inj).			
 
-+!check_injureds : not injured(Inj) <- true.	
++!check_injureds : not injured(Inj) <- .broadcast(tell, end).	
 								
 +!check_injureds(Inj): free[source(Doc)] <- .print("Sending ", Inj, " to ", Doc);
 												-free[source(Doc)];
