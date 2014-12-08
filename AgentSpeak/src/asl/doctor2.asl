@@ -1,5 +1,6 @@
 free.
 
++free: .send(rescuer, tell, free).
 severity_check(Inj) :- robot.severity(Inj,S) &
 						injured(Inj_now,S_now) &
 						S > S_now.
